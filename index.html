@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="body">
+    <div class="container-fluid root-container">
+        <div class="mobile_navbar_root hide" id="mobile_navRoot_id">
+            <div class="overlay_nav">
+                    
+            </div>
+            <div class="mobile_navBar" id="mobile_nav_id">
+                <div id="stars1" class="nav_stars"></div>
+                <div id="stars2" class="nav_stars"></div>
+                <div id="stars3" class="nav_stars"></div>
+                <span class="mobile_nav_link"><i class="fa-solid fa-house"></i>brands</span>
+                <span class="mobile_nav_link"><i class="fa-solid fa-house"></i>influencers</span>
+                <span class="mobile_nav_link"><i class="fa-solid fa-house"></i>pricing</span>
+                <span class="mobile_nav_link"><i class="fa-solid fa-house"></i>blogs</span>
+                <span class="mobile_nav_link"><i class="fa-solid fa-house"></i>contact</span>
+            </div>
+        </div>
+        <div class="home-view">
+            <div id="stars1"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div class="header">
+                <img src="https://www.freeskout.com/img/freeskout.png" width="42" alt="">
+                <div class="nav_links">
+                    <span class="nav_link">brands</span>
+                    <span class="nav_link">influencers</span>
+                    <span class="nav_link">pricing</span>
+                    <span class="nav_link">blogs</span>
+                    <span class="nav_link">contact</span>
+                    <span class="hamburger_btn"><i class="fa-solid fa-bars" id="hamburger_icon" onclick="openNavBar()"></i><i class="fa-solid fa-xmark hide" id="cross_icon" onclick="openNavBar()"></i></span>
+                </div>
+            </div>
+            <div class="banner row">
+                <div class="left col-lg-6">
+                    <h1 class="slide-in">Discover. Connect. Collaborate</h1>
+                    <p class="slide-in-bounce">An ecosystem for Social media Influencers and Brands.</p>
+                    <div class="btn_div">
+                        <button class="fade-up">I'M AN INFLUENCER</button>
+                        <button class="fade-up">I'M A BRAND</button>
+                    </div>
+                </div>
+                <div class="right col-lg-6 fade-in">
+                    <img src="https://www.freeskout.com/img/top-influencer-profiles/top-3.png" alt="">
+                </div>
+            </div>
+            <div class="waveWrapper wrapperTop">
+                <div class="wave waveTop">
+                </div>
+            </div>
+            <div class="waveWrapper wrapperMiddle">
+                <div class="wave waveMiddle">
+                </div>
+            </div>
+            <div class="waveWrapper wrapperBottom">
+                <div class="wave waveBottom">
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <h5>ABOUT US</h5>
+        </div>
+    </div>
+    <script>
+        function openNavBar(){
+            let hamBtn = document.getElementById("hamburger_icon")
+            let crossBtn = document.getElementById('cross_icon')
+            let mobileNavRoot = document.getElementById('mobile_navRoot_id')
+            let mobileNav = document.getElementById('mobile_nav_id')
+            let body = document.getElementById('body')
+            hamBtn.classList.toggle('hide')
+            crossBtn.classList.toggle('hide')
+            mobileNavRoot.classList.toggle('hide')
+            mobileNav.classList.toggle('mobile_navBar_open')
+            body.classList.toggle('scroll_block')
+        }
+    </script>
+</body>
+</html>
