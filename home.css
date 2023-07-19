@@ -73,7 +73,10 @@ body::-webkit-scrollbar {
     }
 }
 .fade-in{
-    animation: fadeIn 8s;
+    animation: fadeIn 6s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -136,15 +139,27 @@ body::-webkit-scrollbar {
     background: linear-gradient(to right, #fff 3%, #e1f2ea);
     height: 100vh;
     top: 59px;
-    right: -90%;
+    right: -100%;
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem 1rem 1.3rem;
     width: 50%;
     overflow: hidden;
+    transition: 1s ;
+    animation:slideRight 1s;
+    animation-direction: reverse;
 }
 .mobile_navBar_open{
-    right: 0;
+    right: -3px;
+    animation:slideRight 1s;
+}
+@keyframes slideRight {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
 }
 .banner{
     padding: 0rem 3rem 0rem 3rem;
@@ -300,7 +315,7 @@ body::-webkit-scrollbar {
     bottom: -1px;
 }
 .wave{
-    background-image: url('https://front-end-noobs.com/jecko/img/wave-top.png');
+    background-image: url('wave-top.png');
     position: absolute;
     left: 0;
     width: 200%;
